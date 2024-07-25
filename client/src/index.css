@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+html, body, #root {
+  @apply h-full w-full bg-white;
+}
+#root {
+  @apply container mx-auto p-4;
+}
+
+.menus{
+  @apply flex items-center ;
+}
+.table-input{
+  @apply rounded-md border-gray-300 shadow-lg border-[.2px] focus:border-indigo-500 p-4 focus:ring-indigo-500 sm:text-sm outline-none;
+}
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+.datepicker-input::-webkit-calendar-picker-indicator {
+  display: none;
+}
+.menus{
+  @apply flex items-center gap-[-2px] mb-[-2px];
+}
+.menus__item{
+  @apply p-4 bg-gray-100  text-gray-500 hover:bg-gray-200 border-2 border-gray-300;
+}
+.menus__item.active{
+  background: white!important;
+  border-bottom: 2px solid white!important;
+}

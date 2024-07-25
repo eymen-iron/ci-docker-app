@@ -1,0 +1,8 @@
+# PHP ve Apache ile resmi bir Docker imajı kullanın
+FROM php:7.4-apache
+
+# Gerekli PHP uzantılarını yükleyin
+RUN docker-php-ext-install mysqli
+
+# CodeIgniter dosyalarını kopyalayın
+COPY src/ /var/www/html/
